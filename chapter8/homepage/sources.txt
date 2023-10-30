@@ -1,0 +1,8 @@
+Sources:
+https://mtbvt.com/archives/25242
+https://stackoverflow.com/questions/42401606/how-to-hide-collapsible-bootstrap-navbar-on-click
+https://getbootstrap.com/docs/5.0/getting-started/introduction/
+https://www.w3schools.com/tags/default.asp
+https://www.w3schools.com/cssref/default.asp
+https://www.trailforks.com/widgets/config/region_map/
+https://www.w3schools.com/howto/howto_js_toggle_dark_mode.asp

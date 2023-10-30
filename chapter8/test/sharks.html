@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+
+<html lang="en">
+    <head>
+        <title>What shark do you like?</title>
+    </head>
+    <body>
+        <h1>What shark do you like?</h1>
+        <input type="text" id="sharkText" placeholder="Shark Name">
+        <button id="sharkButton">I like this shark!</button>
+        <script>
+            document.getElementById("sharkButton").addEventListener("click", function() {
+                let shark = document.querySelector('#sharkText').value;
+                alert("You like this shark: " + shark);
+            });
+        </script>
+    </body>
+</html>

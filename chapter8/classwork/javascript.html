@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+
+<html lang="en">
+    <head>
+
+        <script>
+
+            document.addEventListener('DOMContentLoaded', function() {
+                document.querySelector('form').addEventListener('select', function() {
+                    let name = document.querySelector('#name').value;
+                    alert('hello, ' + name)
+                    let color = document.querySelector('#color').value;
+                    body.style.backgroundColor = color;
+                    event.preventDefault();;
+                });
+            });
+
+        </script>
+        <title>hello</title>
+    </head>
+    <body>
+        <form onsubmit="greet(); return false;">
+            <input autocomplete="off" autofocus id="name" placeholder="Name" type="text">
+            <input autocomplete="off" autofocus id="color" placeholder="Color" type="text">
+            <input type="submit">
+        </form>
+    </body>
+</html>

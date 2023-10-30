@@ -1,0 +1,44 @@
+<!-- Based on https://cdn.cs50.net/2020/fall/lectures/8/src8/hello1.html?highlight -->
+
+<!DOCTYPE html>
+
+<html lang="en">
+    <head>
+        <script>
+
+            // "Storing data in local storage" example from
+            // https://www.w3schools.com/js/js_json_intro.asp
+
+            function save() {
+                let n = document.querySelector('#name').value;
+                let a = document.querySelector('#age').value;
+                let dict = {
+                    name: n,
+                    age: a
+                };
+                let text = JSON.stringify(dict);
+                localStorage.setItem('savedJSON', text);
+            }
+
+            function retrieve() {
+                let text = localStorage.getItem('savedJSON');
+                let dict = JSON.parse(text);
+                document.querySelector('#output').innerHTML = 'Name: ' + dict.name + '<br> Age: ' + dict.age;
+            }
+
+        </script>
+        <title>hello</title>
+    </head>
+    <body>
+        <form onsubmit="save(); return false;">
+            <input autocomplete="off" autofocus id="name" placeholder="Name" type="text">
+            <input autocomplete="off" id="age" placeholder="Age" type="text">
+            <input type="submit" value="Save">
+        </form>
+        <hr>
+        <form onsubmit="retrieve(); return false;">
+            <input type="submit" value="Retrieve">
+            <p id="output"></p>
+        </form>
+    </body>
+</html>
